@@ -15,3 +15,11 @@ test.each([
   ])('multiply %i + %i to equal %i', (a, b, result) => {
     expect(calc.multiply(a, b)).toBe(result);
   });
+
+  test('Is Bitcoin Price Healthy?', ()=>{
+      expect(calc.makeAPIRequest).toBeGreaterThan(40000);
+  })
+
+  test('Return 0?', () =>{
+      expect(calc.returnZero(1)).toBe(0);
+  })

@@ -8,12 +8,12 @@ function multiply(a: number, b: number) {
     return a * b;
 }
 
-async function makeAPIRequest(website){
-    getSite(website)
+async function makeAPIRequest(){
+    getSite('https://api.coindesk.com/v1/bpi/currentprice.json')
         .then(res => res.json())
         .then(obj => {
             return obj['bpi']['USD']['rate_float']
-    })
+        })
 }
 
 function returnZero(x: Number){
